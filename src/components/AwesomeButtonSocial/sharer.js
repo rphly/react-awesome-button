@@ -36,8 +36,8 @@ export default function Sharer({
   const params = {};
   switch (type) {
     case 'facebook':
-      params['title'] = message;
-      params['url'] = url;
+      params['t'] = message;
+      params['u'] = url;
       args.url = `https://www.facebook.com/sharer.php?${serialize(params, '&')}`;
       args.title = 'Facebook Sharer';
       break;
